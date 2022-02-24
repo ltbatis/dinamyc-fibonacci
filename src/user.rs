@@ -12,3 +12,11 @@ pub fn get_loop_range() -> u64 {
     num = number.trim().parse::<u64>().unwrap();
     num
 }
+
+pub fn end() {
+    println!();
+
+    print!("Pressione <Enter> para encerrar...");
+    io::stdout().flush().unwrap();
+    io::stdin().read(&mut [0u8]).unwrap();
+}
